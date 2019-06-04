@@ -6,7 +6,7 @@ class Dice extends Component {
     render() {
         return (
 
-            <i className={`dice fas fa-dice-${this.props.face} ${this.props.rolling ? 'shaking' : null}`}></i>
+            <i className={`dice fas fa-dice-${this.props.face} ${this.props.rolling && 'shaking'}`}></i>
 
         )
     }

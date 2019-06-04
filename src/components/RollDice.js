@@ -26,9 +26,7 @@ class RollDice extends React.Component {
             })
         }, 300);
 
-
         // wait one second and then set rolling to false 
-
         setTimeout(() => {
             this.setState({
                 isRolling: false,
