@@ -20,18 +20,22 @@ class RollDice extends React.Component {
         const newDice2 = this.props.sides[Math.floor(Math.random() * this.props.sides.length)]
 
         // change the state with new Dice
+        setTimeout(() => {
+            this.setState({
+                isRolling: true
+            })
+        }, 300);
 
-        this.setState({
-            dice1: newDice1,
-            dice2: newDice2,
-            isRolling: true
-        })
 
         // wait one second and then set rolling to false 
 
         setTimeout(() => {
-            this.setState({ isRolling: false });
-        }, 500);
+            this.setState({
+                isRolling: false,
+                dice1: newDice1,
+                dice2: newDice2
+            });
+        }, 800);
 
     }
 
